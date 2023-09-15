@@ -720,7 +720,7 @@ video {
 }
 
 .bg-body-background {
-  background-image: url('./image/background-image.png');
+  background-image: url('../image/background-image.png');
 }
 
 .bg-center {
