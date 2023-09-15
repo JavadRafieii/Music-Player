@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="icon" type="icon" href="./image/Music-Icon.png">
+    <link rel="stylesheet" href="./dist/output.css">
+    <script src="./js/main.js" defer></script>
+</head>
+
+<body class="bg-cream bg-body-background bg-no-repeat bg-center h-[100vh] flex items-center justify-center">
+
+    <div class="music-player w-[380px] h-[650px] bg-cream shadow-main-shadow rounded-[50px] p-10">
+
+        <audio id="audio" src="./song/song-1.mp3"></audio>
+
+        <div class="flex items-center justify-end">
+            <span class="loop shadow-main-shadow cursor-pointer active:shadow-active-change rounded-lg p-1">
+                <img src="./image/arrow.png" alt="loop" class="loop-icon w-6">
+            </span>
+        </div>
+
+        <figure
+            class="w-[250px] h-[250px] rounded-full m-auto my-10 flex items-center justify-center shadow-cover-shadow">
+            <img src="./image/leon.jpeg" alt="" class="song-img w-[85%] h-[85%] object-cover rounded-full">
+        </figure>
+
+        <h1 class="song-name font-Montserrat-Medium text-sludge text-2xl text-center">Shape Of My Heart</h1>
+        <h2 class="singer font-Montserrat-Medium text-clear-sludge text-base text-center">Sting</h2>
+
+        <div class="flex items-center justify-between">
+            <span class="current-time font-Montserrat-Bold text-sludge text-xs">00:00</span>
+            <span class="total-time font-Montserrat-Bold text-sludge text-xs">04:38</span>
+        </div>
+
+        <div class="bar w-full h-[5px] bg-clear-gray rounded-2xl mt-3 cursor-pointer">
+            <div class="progress-bar h-full w-0 bg-green rounded-2xl relative">
+                <span
+                    class="block w-5 h-5 bg-cream rounded-full shadow-main-shadow p-[5px] absolute right-[-9px] top-[-7px]">
+                    <span class="block w-full h-full bg-green rounded-full"></span>
+                </span>
+            </div>
+        </div>
+
+        <div class="mt-10">
+            <div class="flex items-center justify-center gap-5">
+                <span class="block p-[5px] w-14 h-14 rounded-full shadow-main-shadow">
+                    <span
+                        class="prev flex items-center justify-center w-full h-full rounded-full shadow-main-shadow cursor-pointer active:shadow-active-change">
+                        <img src="./image/prev.png" alt="prev" class="w-6">
+                    </span>
+                </span>
+                <span class="block w-16 h-16 rounded-full bg-dark-green p-[5px] shadow-main-shadow">
+                    <span id="play-pause"
+                        class="flex items-center justify-center w-full h-full bg-green rounded-full cursor-pointer active:shadow-active-play">
+                        <img id="play-pause-icon" src="./image/play.png" alt="play and pause" class="w-5">
+                    </span>
+                </span>
+                <span class="block p-[5px] w-14 h-14 rounded-full shadow-main-shadow">
+                    <span
+                        class="next flex items-center justify-center w-full h-full rounded-full shadow-main-shadow cursor-pointer active:shadow-active-change">
+                        <img src="./image/next.png" alt="next" class="w-6">
+                    </span>
+                </span>
+                <span class="block p-[5px] w-10 h-10 rounded-full shadow-main-shadow">
+                    <span
+                        class="mute flex items-center justify-center w-full h-full rounded-full shadow-main-shadow cursor-pointer active:shadow-active-change">
+                        <img src="./image/unmute.png" alt="mute" class="icon-mute w-4">
+                    </span>
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
